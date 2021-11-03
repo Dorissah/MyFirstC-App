@@ -1,30 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Csharp_Assignment1.Models
-{
-    class SavingsAccount
+namespace ConsoleApp1
+{ 
+    class AccountDetails
     {
-            public string AccountName { get; }
-            public string AccountNumber { get; }
-            private int BVN { get; }
+        public AccountDetails()
+        {
 
-            string checkBalance(int AccountNumber, int AccountBalance)
-            {
-                return ("Your Account Balance ");
-            }
-            string transferMoney(string AccountNumber, string AccountOwner, int Amount)
-            {
-                string transferDetails = AccountNumber + AccountOwner + Amount;
-                return transferDetails;
-            }
+        }
 
-            void recieveMoney()
-            {
+        public string AccountName { get; }
+        public string AccountNumber { get; set; }
+        private int BVN { get; }
 
-            }
+        public string checkBalance(int AccountNumber)
+        {
+            double accountBalance = 1000;
+            return ("Your Account Balance is " + accountBalance);
+        }
+        public string transferMoney(string AccountNumber, string AccountOwner, int Amount)
+        {
+            string transferDetails = AccountNumber + AccountOwner + Amount;
+            return transferDetails;
+        }
     }
 }
